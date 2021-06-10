@@ -1,0 +1,29 @@
+# Unix
+alias ll="ls -al"
+alias ln="ln -v"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Bundler
+alias b="bundle"
+alias be="bundle exec"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Nav
+alias dev='cd ~/workspace'
+alias work='cd ~/workspace/govly/govly;'
+alias osu='cd ~/workspace/osu/cs261;'
+
+# Git
+alias gits='git status -s'
+alias gitc='git cm'
+alias gitcm='git c'
+alias gita='git add'
+
+# Apps
+alias github='open https://github.com/weilandia'
+alias chrome='open -a "Google Chrome"'
+alias spotify='open -a "Spotify"'
