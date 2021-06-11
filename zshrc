@@ -34,6 +34,8 @@ export GOPATH=$HOME/go
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH=$PATH:$GOPATH/bin
 export PATH="$(yarn global bin):$PATH"
+export PATH="/usr/local/bin/rubocop-daemon-wrapper:$PATH"
+export RUBOCOP_DAEMON_USE_BUNDLER=true
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
