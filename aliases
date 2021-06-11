@@ -26,6 +26,8 @@ alias gitcm='git c'
 alias gita='git add'
 
 # Apps
+alias c='code'
+alias a='code'
 alias atom='code'
 alias github='open https://github.com/weilandia'
 alias chrome='open -a "Google Chrome"'
