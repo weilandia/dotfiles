@@ -1,7 +1,3 @@
-# load custom executable functions
-for function in ~/.zsh/functions/*; do
-  source $function
-done
 
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
@@ -38,7 +34,6 @@ export GOPATH=$HOME/go
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH=$PATH:$GOPATH/bin
 export PATH="$(yarn global bin):$PATH"
-export PATH="$HOME/.bin:$PATH"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
@@ -47,3 +42,12 @@ export PATH="$HOME/.bin:$PATH"
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.bin:$PATH"

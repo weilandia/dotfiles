@@ -16,9 +16,10 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias dev='cd ~/workspace'
 alias work='cd ~/workspace/govly/govly;'
 alias osu='cd ~/workspace/osu/cs261;'
+alias dotfiles='cd ~/dotfiles;'
 
 # Git
-alias gits='git status -s'
+alias gits='git status'
 alias gitc='git cm'
 alias gitcm='git c'
 alias gita='git add'
