@@ -1,13 +1,13 @@
 # Unix
-alias ll="ls -al"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
-alias e="$EDITOR"
-alias v="$VISUAL"
+alias ll='ls -al'
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias e='$EDITOR'
+alias v='$VISUAL'
 
 # Bundler
-alias b="bundle"
-alias be="bundle exec"
+alias b='bundle'
+alias be='bundle exec'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
@@ -20,11 +20,13 @@ alias dotfiles='cd ~/dotfiles;'
 
 # Git
 alias gits='git status'
+alias g='git status'
 alias gitc='git cm'
 alias gitcm='git c'
 alias gita='git add'
 
 # Apps
+alias atom='code'
 alias github='open https://github.com/weilandia'
 alias chrome='open -a "Google Chrome"'
 alias spotify='open -a "Spotify"'
