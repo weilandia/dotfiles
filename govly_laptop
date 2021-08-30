@@ -127,7 +127,10 @@ brew "poppler"
 brew "antiword"
 brew "gnumeric"
 brew "geckodriver"
+brew "libpq"
 brew "rbenv"
+brew "dopplerhq/cli/doppler"
+
 # Apps
 cask "iterm2"
 cask "google-chrome"
@@ -142,6 +145,7 @@ cask "git-credential-manager-core"
 EOF
 
 touch ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
 chsh -s $(which zsh)
 
 fancy_echo "Configuring nvm ..."
