@@ -109,6 +109,7 @@ brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
 tap "universal-ctags/universal-ctags"
+tap "microsoft/git"
 
 # Unix
 brew "git"
@@ -139,13 +140,14 @@ cask "spotify"
 cask "iterm2"
 cask "google-chrome"
 cask "visual-studio-code"
-cask "firefox"
+cask "firefox-developer-edition"
 cask "ngrok"
 cask "chromedriver"
 cask "docker"
 cask "linear-linear"
 cask "postman"
 cask "slack"
+cask "git-credential-manager-core"
 EOF
 
 fancy_echo "Configuring nvm ..."
@@ -174,6 +176,8 @@ curl https://raw.githubusercontent.com/fohte/rubocop-daemon/master/bin/rubocop-d
 sudo mkdir -p /usr/local/bin/rubocop-daemon-wrapper
 sudo mv /tmp/rubocop-daemon-wrapper /usr/local/bin/rubocop-daemon-wrapper/rubocop
 sudo chmod +x /usr/local/bin/rubocop-daemon-wrapper/rubocop
+
+sudo ln -fs /usr/local/bin/rubocop-daemon-wrapper $HOME/.rbenv/shims/rubocop
 
 if [ -r "$HOME/.rcrc" ]; then
   fancy_echo "Updating dotfiles ..."
