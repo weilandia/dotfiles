@@ -142,6 +142,7 @@ cask "linear-linear"
 cask "postman"
 cask "slack"
 cask "git-credential-manager-core"
+cask "google-cloud-sdk"
 EOF
 
 touch ~/.zshrc
