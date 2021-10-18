@@ -143,6 +143,7 @@ cask "postman"
 cask "slack"
 cask "git-credential-manager-core"
 cask "google-cloud-sdk"
+cask "notion"
 EOF
 
 touch ~/.zshrc
