@@ -13,9 +13,8 @@ alias be='bundle exec'
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Nav
-alias dev='cd ~/workspace'
-alias work='cd ~/workspace/govly/govly;'
-alias osu='cd ~/workspace/osu/cs261;'
+alias work='cd ~/repos/govly;'
+alias osu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/osu/cs261;'
 alias dotfiles='cd ~/dotfiles;'
 
 # Git
@@ -31,4 +30,3 @@ alias a='code'
 alias atom='code'
 alias github='open https://github.com/weilandia'
 alias chrome='open -a "Google Chrome"'
-alias spotify='open -a "Spotify"'
