@@ -131,6 +131,7 @@ brew "geckodriver"
 brew "libpq"
 brew "rbenv"
 brew "dopplerhq/cli/doppler"
+brew "docker-compose"
 
 # Apps
 cask "iterm2"
