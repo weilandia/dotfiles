@@ -116,7 +116,7 @@ brew "openssl"
 brew "watchman"
 brew "zsh"
 # GitHub
-brew "hub"
+brew "gh"
 # Image manipulation
 brew "imagemagick"
 # Programming language prerequisites and package managers
