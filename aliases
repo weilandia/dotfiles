@@ -18,11 +18,7 @@ alias osu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/osu/cs261;'
 alias dotfiles='cd ~/dotfiles;'
 
 # Git
-alias gits='git status'
-alias g='git status'
-alias gitc='git cm'
-alias gitcm='git c'
-alias gita='git add'
+# moved to oh my zsh
 
 # Apps
 alias c='code'
