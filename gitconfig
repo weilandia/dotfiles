@@ -14,7 +14,7 @@
   pf = push --force-with-lease
   st = status
   cm = commit -m
-  rb = branches --count=3
+  rb = branches --count=10
   cleanup = !git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d
 [core]
   excludesfile = ~/.gitignore
