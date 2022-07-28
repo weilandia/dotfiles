@@ -164,10 +164,5 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
 
-fancy_echo "Setting rubocop daemon ..."
-curl https://raw.githubusercontent.com/fohte/rubocop-daemon/master/bin/rubocop-daemon-wrapper -o /tmp/rubocop-daemon-wrapper
-sudo mkdir -p /usr/local/bin/rubocop-daemon-wrapper
-sudo mv /tmp/rubocop-daemon-wrapper /usr/local/bin/rubocop-daemon-wrapper/rubocop
-sudo chmod +x /usr/local/bin/rubocop-daemon-wrapper/rubocop
-
-sudo ln -fs /usr/local/bin/rubocop-daemon-wrapper $HOME/.rbenv/shims/rubocop
+fancy_echo "Setting rubocop server ..."
+rubocop --start-server
