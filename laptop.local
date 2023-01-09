@@ -147,6 +147,7 @@ cask "docker"
 cask "postman"
 cask "slack"
 cask "git-credential-manager-core"
+cask "anaconda"
 EOF
 
 fancy_echo "Configuring nvm ..."
