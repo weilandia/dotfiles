@@ -171,9 +171,6 @@ fi
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
 
-fancy_echo "Setting rubocop server ..."
-rubocop --start-server
-
 if [ -r "$HOME/.rcrc" ]; then
   fancy_echo "Updating dotfiles ..."
   rcup
