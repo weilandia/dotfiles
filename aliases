@@ -5,17 +5,12 @@ alias mkdir='mkdir -p'
 alias e='$EDITOR'
 alias v='$VISUAL'
 
-# Bundler
-alias b='bundle'
-alias be='bundle exec'
-
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Nav
 alias work='cd ~/repos/govly;'
 alias wiki='cd ~/repos/govly.wiki;'
-alias osu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/osu/cs261;'
 alias dotfiles='cd ~/dotfiles;'
 
 # Git
