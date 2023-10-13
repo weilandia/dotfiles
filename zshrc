@@ -53,14 +53,3 @@ eval "$(rbenv init -)"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-export PATH="/opt/homebrew/anaconda3/bin:$PATH"
-
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-# bun completions
-[ -s "/Users/weilandia/.bun/_bun" ] && source "/Users/weilandia/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
