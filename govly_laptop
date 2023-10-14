@@ -124,10 +124,11 @@ cask "google-chat"
 cask "git-credential-manager"
 EOF
 
+fancy_echo "Configuring nvm ..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 fancy_echo "Installing node ..."
-curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
 source "$HOME/.zshrc"
-npm install --glbal n
+nvm install --lts
 
 fancy_echo "Installing Yarn ..."
 npm install --global yarn
