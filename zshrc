@@ -38,7 +38,7 @@ PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 
 export PATH=${PATH}:/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
