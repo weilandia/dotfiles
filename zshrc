@@ -1,3 +1,6 @@
+# Add common autocompletions
+autoload -Uz compinit && compinit
+
 # Makes color constants available and enables color output from ls, etc.
 autoload -U colors
 colors
@@ -5,7 +8,7 @@ export CLICOLOR=1
 
 # Set up the prompt
 git_prompt_info() {
-  current_branch=$(git current-branch 2> /dev/null)
+  current_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
   if [[ -n $current_branch ]]; then
     echo " %{$fg_bold[blue]%}$current_branch%{$reset_color%}"
   fi
