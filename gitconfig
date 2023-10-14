@@ -1,12 +1,14 @@
 [init]
   templatedir = ~/.git_template
-	defaultBranch = main
+  defaultBranch = main
 [push]
   default = current
+  autoSetupRemote = true
 [color]
   ui = auto
 [alias]
   branches = for-each-ref --sort=-committerdate --count=10 --format=\"%(color:blue)%(authordate:relative) %(color:green)%(color:bold)%(refname:short) %(color:red)%(authoremail)\" refs/remotes
+  lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
   ci = commit -v
   co = checkout
   pf = push --force-with-lease
@@ -14,10 +16,12 @@
   cm = commit -m
   rb = branches --count=10
   cleanup = !git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d
+
 [core]
   excludesfile = ~/.gitignore
   editor = code
   autocrlf = input
+  whitespace = -trailing-space
 [merge]
   ff = only
 [commit]
@@ -29,6 +33,7 @@
 [include]
   path = ~/.gitconfig.local
 [diff]
+  renames = true
   colorMoved = zebra
   mnemonicprefix = true
 [user]
@@ -36,6 +41,9 @@
   email = nickweiland@gmail.com
   username = weilandia
 [credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
+  helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+  useHttpPath = true
+[log]
+  abbrevCommit = true
+  follow = true
