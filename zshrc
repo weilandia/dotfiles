@@ -1,39 +1,29 @@
+# Makes color constants available and enables color output from ls, etc.
+autoload -U colors
+colors
+export CLICOLOR=1
 
-# extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
-# these are loaded first, second, and third, respectively.
-_load_settings() {
-  _dir="$1"
-  if [ -d "$_dir" ]; then
-    if [ -d "$_dir/pre" ]; then
-      for config in "$_dir"/pre/**/*~*.zwc(N-.); do
-        . $config
-      done
-    fi
-
-    for config in "$_dir"/**/*(N-.); do
-      case "$config" in
-        "$_dir"/(pre|post)/*|*.zwc)
-          :
-          ;;
-        *)
-          . $config
-          ;;
-      esac
-    done
-
-    if [ -d "$_dir/post" ]; then
-      for config in "$_dir"/post/**/*~*.zwc(N-.); do
-        . $config
-      done
-    fi
+# Set up the prompt
+git_prompt_info() {
+  current_branch=$(git current-branch 2> /dev/null)
+  if [[ -n $current_branch ]]; then
+    echo " %{$fg_bold[blue]%}$current_branch%{$reset_color%}"
   fi
 }
-_load_settings "$HOME/.zsh/configs"
 
-export GOPATH="$HOME/go"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH=$PATH:$GOPATH/bin
-export PATH="$(yarn global bin):$PATH"
+emoji_prompt() {
+  echo "%{$fg_bold[red]%}✈ %{$reset_color%}"
+}
+
+setopt promptsubst
+
+## Allow exported PS1 variable to override default prompt.
+if ! env | grep -q '^PS1='; then
+  PS1='${SSH_CONNECTION+"%{$fg_bold[blue]%}%n@%m:"}%{$fg_bold[yellow]%}%c%{$reset_color%}$(git_prompt_info) $(emoji_prompt)'
+fi
+
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
@@ -41,11 +31,11 @@ export PATH="$(yarn global bin):$PATH"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export VISUAL=vscode
+export EDITOR=$VISUAL
+export HOMEBREW_NO_ANALYTICS=1
+export PATH="$(yarn global bin):$PATH"
+PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 
 export PATH=${PATH}:/bin
 export PATH="$HOME/.rbenv/bin:$PATH"

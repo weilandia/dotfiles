@@ -1,13 +1,11 @@
 [init]
   templatedir = ~/.git_template
-	defaultBranch = master
+	defaultBranch = main
 [push]
   default = current
 [color]
   ui = auto
 [alias]
-  aa = add --all
-  ap = add --patch
   branches = for-each-ref --sort=-committerdate --count=10 --format=\"%(color:blue)%(authordate:relative) %(color:green)%(color:bold)%(refname:short) %(color:red)%(authoremail)\" refs/remotes
   ci = commit -v
   co = checkout
@@ -38,7 +36,6 @@
   email = nickweiland@gmail.com
   username = weilandia
 [credential]
-	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager-core
 [credential "https://dev.azure.com"]
 	useHttpPath = true
