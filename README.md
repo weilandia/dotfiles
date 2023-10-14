@@ -16,7 +16,7 @@ Setup a new laptop:
 
 Clone onto your laptop:
 
-    git clone git://github.com/weilandia/dotfiles.git ~/dotfiles
+    git clone https://github.com/weilandia/dotfiles.git ~/dotfiles
 
 
 Install [rcm](https://github.com/thoughtbot/rcm):
