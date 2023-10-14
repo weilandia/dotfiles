@@ -115,6 +115,7 @@ brew "antiword"
 brew "gnumeric"
 brew "dopplerhq/cli/doppler"
 brew "node"
+brew "gh"
 
 cask "iterm2"
 cask "google-chrome"
