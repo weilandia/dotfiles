@@ -34,7 +34,6 @@ bindkey "^E" end-of-line
 export VISUAL=vscode
 export EDITOR=$VISUAL
 export HOMEBREW_NO_ANALYTICS=1
-export PATH="$(yarn global bin):$PATH"
 PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 
 export PATH=${PATH}:/bin
