@@ -125,10 +125,10 @@ cask "git-credential-manager"
 EOF
 
 fancy_echo "Configuring nvm ..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
 fancy_echo "Installing node ..."
 source "$HOME/.zshrc"
-nvm install --lts
+nvm install --latest-npm
 
 fancy_echo "Installing Yarn ..."
 npm install --global yarn
@@ -138,16 +138,5 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 source "$HOME/.zshrc"
 rbenv install $(rbenv install -l | grep -v - | tail -1)
 
-if [ -f "$HOME/.laptop.local" ]; then
-  fancy_echo "Running your customizations from ~/.laptop.local ..."
-  # shellcheck disable=SC1090
-  . "$HOME/.laptop.local"
-fi
-
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
-
-if [ -r "$HOME/.rcrc" ]; then
-  fancy_echo "Updating dotfiles ..."
-  rcup
-fi
