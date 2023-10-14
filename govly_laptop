@@ -116,6 +116,7 @@ brew "gnumeric"
 brew "dopplerhq/cli/doppler"
 brew "node"
 brew "gh"
+brew "libpq"
 
 cask "iterm2"
 cask "google-chrome"
