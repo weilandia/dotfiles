@@ -120,7 +120,6 @@ cask "google-chrome"
 cask "visual-studio-code"
 cask "docker"
 cask "postman"
-cask "google-chat"
 cask "git-credential-manager"
 EOF
 
