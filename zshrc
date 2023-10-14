@@ -1,6 +1,3 @@
-# Add common autocompletions
-autoload -Uz compinit && compinit
-
 # Makes color constants available and enables color output from ls, etc.
 autoload -U colors
 colors
@@ -45,3 +42,9 @@ eval "$(rbenv init - zsh)"
 
 export PATH="$HOME/.bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Add common autocompletions
+autoload -Uz compinit && compinit
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '\t' autosuggest-accept
+

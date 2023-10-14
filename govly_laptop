@@ -117,6 +117,7 @@ brew "dopplerhq/cli/doppler"
 brew "node"
 brew "gh"
 brew "libpq"
+brew "zsh-autosuggestions"
 
 cask "iterm2"
 cask "google-chrome"
