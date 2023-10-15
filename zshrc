@@ -1,8 +1,8 @@
-source ~/.zsh/configs/color
-source ~/.zsh/configs/history
-source ~/.zsh/configs/homebrew
-source ~/.zsh/configs/options
-source ~/.zsh/configs/prompt
-source ~/.zsh/configs/aliases
-source ~/.zsh/configs/completion
-source ~/.zsh/configs/path
+source ~/.zsh/color
+source ~/.zsh/history
+source ~/.zsh/homebrew
+source ~/.zsh/options
+source ~/.zsh/prompt
+source ~/.zsh/aliases
+source ~/.zsh/completion
+source ~/.zsh/path

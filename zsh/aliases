@@ -14,3 +14,5 @@ alias gits='git status'
 alias gitc='git cm'
 alias gitcm='git c'
 alias gita='git add'
+
+alias aic='aicommits'
