@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Ensure dotfiles bin directory is loaded first
+PATH="$HOME/.bin:/usr/local/sbin:$PATH"
+PATH=${PATH}:/bin
+PATH="$HOME/.bin:$PATH"
+PATH="$HOME/.rbenv/bin:$PATH"
+PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+[[ -r "$HOME/.rbenv" ]] && eval "$(rbenv init - zsh)"
+
+export -U PATH

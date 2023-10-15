@@ -1,19 +1,15 @@
-# Unix
+alias ls='ls -a'
 alias ll='ls -al'
 alias ln='ln -v'
 alias mkdir='mkdir -p'
 alias e='$EDITOR'
 alias v='$VISUAL'
-
-# Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
-# Nav
 alias work='cd ~/repos/govly;'
 alias wiki='cd ~/repos/govly.wiki;'
 alias dotfiles='cd ~/dotfiles;'
 
-# Git
 alias gits='git status'
 alias gitc='git cm'
 alias gitcm='git c'

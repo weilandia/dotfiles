@@ -118,6 +118,7 @@ brew "node"
 brew "gh"
 brew "libpq"
 brew "zsh-autosuggestions"
+brew "the_silver_searcher"
 
 cask "iterm2"
 cask "google-chrome"
