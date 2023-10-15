@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# load our own completion functions
-fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
-
 # completion; use cache if updated within 24h
 autoload -Uz compinit
 if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
@@ -10,9 +7,5 @@ if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
 else
   compinit -C;
 fi;
-
-# disable zsh bundled function mtools command mcd
-# which causes a conflict.
-compdef -d mcd
 
 [[ -r "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
