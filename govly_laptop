@@ -125,6 +125,7 @@ cask "visual-studio-code"
 cask "docker"
 cask "postman"
 cask "git-credential-manager"
+cask "anaconda"
 EOF
 
 fancy_echo "Configuring nvm ..."
