@@ -18,12 +18,13 @@
   cleanup = !git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d
 [core]
   excludesfile = ~/.gitignore
-  editor = code
+  editor = vim
   autocrlf = input
 [merge]
   ff = only
 [commit]
   template = ~/.gitmessage
+	gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -37,8 +38,10 @@
   name = David Whitaker
   email = damwhit@gmail.com
   username = damwhit
+	signingkey = 9B9CBAB824F8B3BB
 [credential]
 	helper =
-	helper = /usr/local/share/gcm-core/git-credential-manager-core
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true

@@ -57,3 +57,4 @@ export PATH="$HOME/.bin:$PATH"
 
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
