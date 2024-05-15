@@ -104,6 +104,8 @@ brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "microsoft/git"
 tap "dopplerhq/cli"
+tap "homebrew/cask-fonts"
+
 
 brew "git"
 brew "rcm"
@@ -118,6 +120,7 @@ brew "node"
 brew "gh"
 brew "libpq"
 brew "zsh-autosuggestions"
+brew "starship"
 
 cask "iterm2"
 cask "google-chrome"
@@ -126,6 +129,7 @@ cask "docker"
 cask "postman"
 cask "git-credential-manager"
 cask "anaconda"
+cask "homebrew/cask-fonts/font-meslo-lg-nerd-font"
 EOF
 
 fancy_echo "Configuring nvm ..."
