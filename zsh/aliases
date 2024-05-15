@@ -6,13 +6,15 @@ alias e='$EDITOR'
 alias v='$VISUAL'
 alias path='echo $PATH | tr -s ":" "\n"'
 
-alias work='cd ~/repos/govly;'
-alias wiki='cd ~/repos/govly.wiki;'
+alias work='cd ~/repos/govlyverse/govly;'
+alias wiki='cd ~/repos/govlyverse/govly.wiki;'
+alias gv='code ~/repos/govlyverse;'
 alias dotfiles='cd ~/dotfiles;'
 
 alias gits='git status'
 alias gitc='git cm'
 alias gitcm='git c'
 alias gita='git add'
+alias ghb='gh browse'
 
 alias aic='aicommits'
