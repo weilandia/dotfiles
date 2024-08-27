@@ -129,7 +129,7 @@ cask "docker"
 cask "postman"
 cask "git-credential-manager"
 cask "anaconda"
-cask "homebrew/cask-fonts/font-meslo-lg-nerd-font"
+cask "font-meslo-lg-nerd-font"
 EOF
 
 fancy_echo "Configuring nvm ..."

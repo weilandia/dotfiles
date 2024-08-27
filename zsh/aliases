@@ -18,3 +18,8 @@ alias gita='git add'
 alias ghb='gh browse'
 
 alias aic='aicommits'
+
+
+function issue() {
+    gh issue develop "$1" --checkout
+}

@@ -19,7 +19,7 @@
 
 [core]
   excludesfile = ~/.gitignore
-  editor = code
+	editor = code
   autocrlf = input
   whitespace = -trailing-space
 [merge]
