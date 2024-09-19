@@ -104,8 +104,6 @@ brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "microsoft/git"
 tap "dopplerhq/cli"
-tap "homebrew/cask-fonts"
-
 
 brew "git"
 brew "rcm"
