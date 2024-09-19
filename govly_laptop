@@ -131,6 +131,7 @@ cask "superhuman"
 cask "sunsama"
 cask "notion-calendar"
 cask "git-credential-manager"
+cask "raycast"
 cask "font-meslo-lg-nerd-font"
 EOF
 
