@@ -11,7 +11,51 @@ alias gita='git add'
 
 alias aic='aicommits'
 
+function br() {
+  gh pr list --state open --json headRefName,author --jq '.[] | "\(.author.login) \(.headRefName)"' | \
+  sort | \
+  awk '
+  BEGIN {
+    GREEN="\033[0;32m";
+    CYAN="\033[0;36m";
+    RESET="\033[0m";
+    current_owner="";
+  }
+  {
+    if ($1 != current_owner) {
+      current_owner = $1;
+      printf "\n%s%s%s\n", CYAN, current_owner, RESET;
+    }
+    printf "  %s%s%s\n", GREEN, $2, RESET;
+  }
+  '
+}
+
+
 
 function issue() {
-    gh issue develop "$1" --checkout
+  gh issue develop "$1" --checkout
+}
+
+function pr() {
+  local branch
+  branch=$(git symbolic-ref --short HEAD)
+
+  local pr_url
+  pr_url=$(gh pr view --json url --jq .url 2>/dev/null)
+
+  if [[ -n $pr_url ]]; then
+    gh pr view --web
+  else
+    gh pr create --draft
+  fi
+}
+
+
+function rails() {
+  if [ -f "bin/rails" ]; then
+    ./bin/rails "$@"
+  else
+    command rails "$@"
+  fi
 }

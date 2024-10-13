@@ -14,7 +14,6 @@
   pf = push --force-with-lease
   st = status
   cm = commit -m
-  rb = branches --count=10
   cleanup = !git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d
 
 [core]
@@ -44,7 +43,7 @@
   abbrevCommit = true
   follow = true
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
