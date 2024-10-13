@@ -1,0 +1,106 @@
+{
+  "allowAnonymousTelemetry": false,
+  "models": [
+    {
+      "model": "claude-3-5-sonnet-20240620",
+      "provider": "anthropic",
+      "apiKey": "",
+      "title": "Claude 3.5 Sonnet"
+    },
+    {
+      "title": "GPT-4o",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "apiKey": ""
+    },
+    {
+      "title": "GPT-4o1",
+      "provider": "openai",
+      "model": "o1-preview",
+      "apiKey": ""
+    },
+    {
+      "title": "Llama 3.2",
+      "provider": "ollama",
+      "model": "llama3.2:latest"
+    }
+  ],
+  "tabAutocompleteModel": {
+      "title": "Mistral Large",
+      "provider": "mistral",
+      "model": "codestral-latest",
+      "apiKey": "",
+      "apiBase": "https://api.mistral.ai/v1"
+  },
+  "customCommands": [
+    {
+      "name": "ruby-test",
+      "prompt": "You are a helpful programming assistant who is an expert in testing Ruby on Rails applications. Given some code and any supporting context, you respond with an ActiveSupport::TestCase file. The file should: Use the 'test do...' syntax, Start each test name with # if it's testing a method, Do not use the 'setup' method and instead bootstrap objects within each test, If you need to use mocks or stubs, use mocha.\n\n{{{ input }}}",
+      "description": "Write unit tests for highlighted code"
+    }
+  ],
+  "contextProviders": [
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
+      "params": {}
+    },
+    {
+      "name": "folder",
+      "params": {}
+    },
+    {
+      "name": "codebase",
+      "params": {}
+    }
+  ],
+  "slashCommands": [
+    {
+      "name": "edit",
+      "description": "Edit selected code"
+    },
+    {
+      "name": "comment",
+      "description": "Write comments for the selected code"
+    },
+    {
+      "name": "share",
+      "description": "Export the current chat session to markdown"
+    },
+    {
+      "name": "cmd",
+      "description": "Generate a shell command"
+    },
+    {
+      "name": "commit",
+      "description": "Generate a git commit message"
+    }
+  ],
+  "embeddingsProvider":     {
+    "provider": "openai",
+    "model": "text-embedding-3-large",
+    "apiKey": ""
+  },
+  "reranker": {
+    "name": "voyage",
+    "params": {
+      "model": "rerank-1",
+      "apiKey": ""
+    }
+  }
+}
