@@ -3,3 +3,7 @@ command_timeout = 1000
 disabled = true
 [aws]
 disabled = true
+[nodejs]
+format = '[$symbol($version )]($style)'
+[ruby]
+format = '[$symbol($version )]($style)'
