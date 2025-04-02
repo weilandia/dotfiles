@@ -9,7 +9,16 @@ alias gits='git status'
 alias gitc='git cm'
 alias gita='git add'
 
-alias aic='aicommits'
+alias c="windsurf"
+
+if command -v code-insiders &> /dev/null; then
+  alias code="code-insiders"
+fi
+
+# Define the code function
+function code() {
+  command code "$@"
+}
 
 function br() {
   gh pr list --state open --json headRefName,author --jq '.[] | "\(.author.login) \(.headRefName)"' | \
