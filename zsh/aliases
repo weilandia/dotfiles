@@ -20,6 +20,10 @@ function code() {
   command code "$@"
 }
 
+function brs() {
+  git for-each-ref --sort=-committerdate --format="%(committerdate:short) | %(authorname) | %(refname:short)" refs/heads/
+}
+
 function br() {
   gh pr list --state open --json headRefName,author --jq '.[] | "\(.author.login) \(.headRefName)"' | \
   sort | \
