@@ -13,7 +13,7 @@
   cleanup = !git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d
 [core]
   excludesfile = ~/.gitignore
-	editor = windsurf
+	editor = code
   autocrlf = input
   whitespace = -trailing-space
 [merge]

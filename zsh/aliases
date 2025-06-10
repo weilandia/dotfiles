@@ -9,16 +9,7 @@ alias gits='git status'
 alias gitc='git cm'
 alias gita='git add'
 
-alias c="windsurf"
-
-if command -v code-insiders &> /dev/null; then
-  alias code="code-insiders"
-fi
-
-# Define the code function
-function code() {
-  command code "$@"
-}
+alias c="code"
 
 function brs() {
   git for-each-ref --sort=-committerdate --format="%(committerdate:short) | %(authorname) | %(refname:short)" refs/heads/
