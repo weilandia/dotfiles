@@ -1,0 +1,1 @@
+Git add all changes, commit with a simple commit message, and push to the remote branch.

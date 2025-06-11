@@ -1,0 +1,1 @@
+Find my most recent git branch and switch to it using `git checkout`.
