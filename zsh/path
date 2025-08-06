@@ -6,6 +6,8 @@ PATH=${PATH}:/bin
 PATH="$HOME/.bin:$PATH"
 PATH="$HOME/.rbenv/bin:$PATH"
 PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+PATH="/opt/homebrew/opt/python@3.13/libexec/bin:$PATH"
+PATH="~/.local/bin:$PATH"
 
 [[ -r "$HOME/.rbenv" ]] && eval "$(rbenv init - zsh)"
 
