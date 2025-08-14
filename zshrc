@@ -1,3 +1,7 @@
+# Starship prompt
+eval "$(starship init zsh)"
+
+# Color settings, history, aliases, etc.
 source ~/.zsh/color
 source ~/.zsh/history
 source ~/.zsh/homebrew
@@ -5,10 +9,17 @@ source ~/.zsh/options
 source ~/.zsh/aliases
 source ~/.zsh/completion
 source ~/.zsh/path
-eval "$(starship init zsh)"
 
+# Orbstack shell integration (optional)
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+# Homebrew environment (Apple Silicon)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# rbenv Ruby version manager
+eval "$(rbenv init - --no-rehash zsh)"
+
+# Node Version Manager (NVM)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.bin:$PATH"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"

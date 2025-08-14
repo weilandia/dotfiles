@@ -117,6 +117,7 @@ brew "gh"
 brew "libpq"
 brew "zsh-autosuggestions"
 brew "starship"
+brew "uv"
 
 cask "ghostty"
 cask "google-chrome"
