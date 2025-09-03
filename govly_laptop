@@ -118,6 +118,7 @@ brew "libpq"
 brew "zsh-autosuggestions"
 brew "starship"
 brew "uv"
+brew "rv"
 
 cask "ghostty"
 cask "google-chrome"
@@ -139,9 +140,8 @@ fancy_echo "Installing Yarn ..."
 npm install --global yarn
 
 fancy_echo "Installing ruby ..."
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | zsh
-source "$HOME/.zshrc"
-rbenv install $(rbenv install -l | grep -v - | tail -1)
+echo 'eval "$(rv shell init zsh)"' >> ~/.zshrc
+eval "$(rv shell init zsh)"
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
