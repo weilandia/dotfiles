@@ -1,11 +1,15 @@
 #!/bin/sh
 
-# completion; use cache if updated within 24h
+# Basic zsh completion setup
 autoload -Uz compinit
-if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
-  compinit -d $HOME/.zcompdump;
-else
-  compinit -C;
-fi;
+compinit -i
 
-[[ -r "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Enable completion caching
+zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' use-cache true
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Better completion selection
+zstyle ':completion:*' menu select
