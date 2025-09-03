@@ -16,8 +16,8 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 # Homebrew environment (Apple Silicon)
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# rv Ruby version manager
-eval "$(rv shell init zsh)"
+# rbenv Ruby version manager
+eval "$(rbenv init - zsh)"
 
 # Node Version Manager (NVM)
 export NVM_DIR="$HOME/.nvm"
