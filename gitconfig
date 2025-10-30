@@ -20,6 +20,7 @@
   ff = only
 [commit]
   template = ~/.gitmessage
+	gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -32,7 +33,7 @@
   mnemonicprefix = true
 [user]
   name = Nick Weiland
-  email = nickweiland@gmail.com
+	email = nick@govly.com
   username = weilandia
 [log]
   abbrevCommit = true
@@ -42,3 +43,5 @@
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[gpg]
+	program = /opt/homebrew/bin/gpg

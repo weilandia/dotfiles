@@ -1,0 +1,3 @@
+[user]
+  # Replace with your GPG key ID from: gpg --list-secret-keys --keyid-format=long
+  signingkey = YOUR_GPG_KEY_ID_HERE
